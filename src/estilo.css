@@ -1,0 +1,320 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111827;
+  background: #f3f4f6;
+  font-size: 16px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 1rem;
+}
+
+button {
+  font: inherit;
+}
+
+button:focus-visible {
+  outline: 4px solid #1d4ed8;
+  outline-offset: 3px;
+}
+
+.contenedor {
+  width: min(100% - 32px, 760px);
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.pantalla-inicio {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+.panel {
+  border: 2px solid #374151;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(17 24 39 / 10%);
+}
+
+.bienvenida {
+  width: 100%;
+  padding: clamp(24px, 7vw, 56px);
+  text-align: center;
+}
+
+.sobrelinea {
+  margin: 0 0 8px;
+  color: #374151;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  line-height: 1.15;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 1.125rem;
+}
+
+.introduccion,
+.mensaje-final {
+  max-width: 560px;
+  margin: 0 auto 24px;
+  font-size: 1.125rem;
+  line-height: 1.55;
+}
+
+.boton {
+  min-height: 52px;
+  padding: 12px 20px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.boton-principal {
+  color: #fff;
+  background: #14532d;
+}
+
+.boton-principal:hover {
+  background: #166534;
+}
+
+.boton-secundario {
+  border-color: #374151;
+  color: #111827;
+  background: #fff;
+}
+
+.boton-secundario:hover {
+  background: #e5e7eb;
+}
+
+.encabezado {
+  margin-bottom: 20px;
+}
+
+.encabezado-juego {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.encabezado-juego h1 {
+  margin-bottom: 0;
+}
+
+.panel-juego {
+  padding: clamp(16px, 4vw, 28px);
+}
+
+.barra-estado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-bottom: 16px;
+}
+
+.contador,
+.aviso-modo {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.aviso-modo strong {
+  color: #14532d;
+}
+
+.cuadricula {
+  display: grid;
+  width: min(100%, 480px);
+  margin: 0 auto;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 4px;
+}
+
+.casilla {
+  display: grid;
+  min-width: 0;
+  aspect-ratio: 1;
+  place-items: center;
+  padding: 0;
+  border: 2px solid #111827;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.casilla:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.casilla-tapada,
+.muestra-tapada {
+  color: #fff;
+  background: #374151;
+}
+
+.casilla-segura,
+.muestra-segura {
+  color: #fff;
+  background: #15803d;
+}
+
+.casilla-marcada,
+.muestra-marcada {
+  color: #111827;
+  background: #facc15;
+}
+
+.casilla-riesgo,
+.muestra-riesgo {
+  color: #fff;
+  background: #b91c1c;
+}
+
+.casilla-seleccionada {
+  outline: 4px solid #1d4ed8;
+  outline-offset: 2px;
+  z-index: 1;
+}
+
+.controles {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.boton-bandera {
+  width: 100%;
+  border-color: #713f12;
+  color: #111827;
+  background: #facc15;
+}
+
+.boton-bandera:hover,
+.boton-bandera.activo {
+  color: #fff;
+  background: #713f12;
+}
+
+.ayuda-controles {
+  margin: 12px 0 0;
+  line-height: 1.5;
+}
+
+.leyenda {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 20px;
+}
+
+.leyenda p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.muestra {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #111827;
+  border-radius: 4px;
+}
+
+.pantalla-final > .encabezado,
+.pantalla-final > .boton {
+  text-align: center;
+}
+
+.mensaje-final {
+  margin-bottom: 20px;
+}
+
+.mapa-final {
+  padding: 16px;
+}
+
+.panel-resumen {
+  margin: 20px 0;
+  padding: clamp(20px, 5vw, 32px);
+}
+
+.lista-riesgos {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.resumen-riesgo {
+  padding: 16px;
+  border-left: 6px solid #b91c1c;
+  border-radius: 6px;
+  background: #f3f4f6;
+}
+
+.resumen-riesgo p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+@media (max-width: 480px) {
+  .contenedor {
+    width: min(100% - 24px, 760px);
+    padding: 20px 0;
+  }
+
+  .encabezado-juego {
+    align-items: flex-start;
+  }
+
+  .encabezado-juego .boton {
+    flex-shrink: 0;
+    padding-inline: 14px;
+  }
+
+  .cuadricula {
+    gap: 3px;
+  }
+
+  .casilla {
+    border-radius: 3px;
+  }
+}
